@@ -1,0 +1,30 @@
+i.forNav {
+    font-size: 1.2em;
+    position: relative;
+    bottom: 7px;
+}
+
+i.forTitle {
+    font-size: 50%;
+    position: relative;
+    bottom: 20px;
+    right: 8px;
+}
+
+.main.text.container {
+    margin-top: 7em;
+    margin-bottom: 3em;
+}
+
+img {
+    width: 660px;
+    max-width: 660px;
+}
+
+a, a:hover {
+    color: inherit;
+}
+
+#delete {
+    display: inline;
+}

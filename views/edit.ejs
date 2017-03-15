@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit Post:</div>
+        <form class="ui form" action="/posts/<%= editPost["_id"] %>?_method=PUT" method="POST">
+            <div class="field">
+                <label>Title:</label>
+                <input type="text" name="postEdit[title]" value=" <%= editPost["title"] %> "><br><br>
+            </div>
+            <div class="field">
+                <label>Image:</label>
+                <input type="text" name="postEdit[image]" value=" <%= editPost["image"] %> "><br><br>
+            </div>
+            <div class="field">
+                <label>New Post:</label>
+                <textarea type="text" name="postEdit[body]" cols="80" row="10"> <%- editPost["body"] %></textarea>
+            </div>
+                <input class="ui green button" type="submit" value="Save">
+                <a class="ui button" href="/posts/<%= editPost["_id"] %>">Cancel</a>
+        </form>
+    </div>
+</div>
+
+<% include partials/footer %>
