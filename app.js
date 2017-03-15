@@ -7,7 +7,8 @@ app             = express();
 
 
 //App Config:
-mongoose.connect("mongodb://localhost/gen_blog");
+var url = process.env.DATABASEURL || "mongodb://localhost/gen_blog"
+mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
