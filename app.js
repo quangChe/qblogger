@@ -1,13 +1,13 @@
-var bodyParser  = require("body-parser"),
-expressSanitizer = require("express-sanitizer"),
-methodOverride  = require("method-override"),
-mongoose        = require("mongoose"),
-express         = require("express"),
-app             = express();
+var bodyParser          = require("body-parser"),
+    expressSanitizer    = require("express-sanitizer"),
+    methodOverride      = require("method-override"),
+    mongoose            = require("mongoose"),
+    express             = require("express"),
+    app                 = express();
 
 
 //App Config:
-var url = process.env.DATABASEURL || "mongodb://localhost/gen_blog"
+var url = process.env.DATABASEURL || "mongodb://localhost/gen_blog";
 mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(express.static("public"));

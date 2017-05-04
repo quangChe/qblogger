@@ -3,7 +3,7 @@
 <div class="ui main text container">
     <h3 class="ui center aligned header">
           <img class="ui small circular image" src="http://www.sunrisedayspa.com/wp-content/uploads/2016/02/sunrise-massage-400-400.png"><br><br>
-          "Daily Food for Thought"
+          "Your Daily Insight"
     </h3>
     <br>
     <div class="ui top attached segment">
@@ -19,7 +19,7 @@
                             <span> <%= post["date"].toDateString() %> </span>
                         </div>
                         <div class="description">
-                            <p> <%- post["body"].substring(0, 100) %>...</p>
+                            <p> <%= String(post["body"]).substr(0, 75) %>...</p>
                         </div>
                         <div class="extra">
                              <p class="ui secondary button"><a href="/posts/<%= post["_id"] %>">Read More...</a></p>
